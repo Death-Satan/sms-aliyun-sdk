@@ -1,0 +1,9 @@
+parameters:
+    level: 8
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    paths:
+        - src
+    excludes_analyse:
+        - tests/*
+        - src/AliyunAdapter.php

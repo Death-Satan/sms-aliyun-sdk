@@ -1,0 +1,41 @@
+{
+    "name": "death_satan/sms-aliyun-sdk",
+    "description": "this is aliyun sms library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DeathSatan\\SmsAliyunSdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DeathSatan\\SmsAliyunSdkTests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Death-Satan",
+            "email": "2771717608@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "alibabacloud/sdk": "^1.8",
+        "death_satan/sms-sdk": "^1.0",
+        "alibabacloud/darabonba-openapi": "^0.2.5",
+        "alibabacloud/dysmsapi-20170525": "2.0.12",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.8",
+        "mockery/mockery": "^1.5",
+        "friendsofphp/php-cs-fixer": "^3.8"
+    },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml --colors=always",
+        "analyse": "phpstan analyse --memory-limit 1024M -l 0 ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    }
+}
